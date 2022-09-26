@@ -1,4 +1,4 @@
-package alenaD_code;
+package alenaD_code.task1;
 
 public class EvenOrOdd {
     /*
