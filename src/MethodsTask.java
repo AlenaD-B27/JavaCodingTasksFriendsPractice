@@ -12,6 +12,9 @@ public class MethodsTask {
     public static void withoutDivideOperator(int num1, int num2){
 
         int result = 0;
+        if (num2 == 0){
+            num1 = -1;
+        }
         while (num1 >= num2){
             num1 -= num2;
             result++;
@@ -25,8 +28,8 @@ public class MethodsTask {
     public static void main(String[] args) {
 
     evenOrOdd(2);
-    withoutDivideOperator(6,3);
-
+    withoutDivideOperator(6,7);
+    
 
     }
 }
