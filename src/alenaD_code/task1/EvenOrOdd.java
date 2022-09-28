@@ -9,16 +9,22 @@ public class EvenOrOdd {
      */
 
     public static void identify(int number){
-        if(number % 2 == 0){
-            System.out.println("number " + number + " is EVEN");
+        if(number != 0) {
+
+            if (number % 2 == 0) {
+                System.out.println("number " + number + " is EVEN");
+            } else {
+                System.out.println("number " + number + " is ODD");
+            }
         } else {
-            System.out.println("number " + number + " is ODD");
+
+            System.out.println("Zero can not be odd or even");
         }
     }
 
     public static void main(String[] args) {
-        identify(5);
-        identify(6);
+        identify(-2);
+        identify(0);
     }
 
 
