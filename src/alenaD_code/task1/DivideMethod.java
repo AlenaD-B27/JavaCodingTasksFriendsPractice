@@ -15,7 +15,7 @@ public class DivideMethod {
                 nominator -= denominator;
                 count++;
             }
-
+// some changes
             int countRemainder = 0;
             nominator *= 10;
             while (nominator > 0) {
