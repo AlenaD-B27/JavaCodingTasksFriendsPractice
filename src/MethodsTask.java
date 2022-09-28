@@ -11,16 +11,19 @@ public class MethodsTask {
 
     public static void withoutDivideOperator(int num1, int num2){
 
-        int result = 0;
-        if (num2 == 0){
-            num1 = -1;
+        double result = 0.0;
+        if(num2 == 0){
+            System.out.println("You cannot divide by 0");
+       // }
+        // if (num1 < 0){
+           // System.out.println(result--);
         }
         while (num1 >= num2){
-            num1 -= num2;
+            num1 = num1 - num2;
             result++;
 
         }
-        System.out.println(result);
+        System.out.println(result + " % is " + num1);
     }
 
     public static void finra(){
@@ -38,9 +41,9 @@ public class MethodsTask {
 
     public static void main(String[] args) {
 
-    evenOrOdd(2);
-    withoutDivideOperator(6,7);
-    finra();
+   // evenOrOdd(2);
+    withoutDivideOperator(6,2);
+  //  finra();
 
     }
 }
