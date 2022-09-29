@@ -6,44 +6,89 @@ public class DivideMethod {
     Write a method that can divide two numbers without using the "/" operator.
      */
 
-    public static String divide(double nominator, double denominator) {
+    public static double divide(double nominator, double denominator) {
 
-        if (denominator != 0) {
+        int sign = 1;                   // constructing the result:
+        double wholeNumberPart = 0;     // declaring the parts and
+        double decimalPart = 0;         // assigning the default values.
 
-            int sign = 1;
-            if (nominator * denominator < 0){
-                sign = -1;
+
+        if (denominator == 0) {                                     // handling the "divide by 0" case;
+            System.out.println("ERROR: CAN NOT DIVIDE BY ZERO!!!"); // or we can throw exception here.
+        } else {
+                                                // handled all the cases with negative numbers:
+            if (nominator * denominator < 0){   // if  at least one of the numbers is negative => product is negative:
+                sign = -1;                      // the sign of the result will be "-".
             }
 
-            nominator = Math.abs(nominator);
-            denominator = Math.abs(denominator);
+ //           System.out.println("sign = " + sign);
 
-            int wholeNumberPart = 0;
-            while (nominator > denominator) {
-                nominator -= denominator;
+            nominator = Math.abs(nominator);        // both nominator and denominator need to be turned into positive numbers.
+            denominator = Math.abs(denominator);    // Math.abs(-x); is the method for |-x| = x.
+
+            while (nominator > denominator) {  // here we are checking how many times denominator can fit into nominator
+                nominator -= denominator;      // by subtraction: 10/2 = 10-2-2-2-2-2 = 10-(2*5) --> 5 is the result.
                 wholeNumberPart++;
             }
 
-            double remainder = nominator;
+//            System.out.println("wholeNumberPart = " + wholeNumberPart);
 
-            int decimalPart = 0;
-            remainder *= 100;
-            while (remainder > 0) {
+            double remainder = nominator; // "leftovers" of the nomination is a remainder.
+
+//            System.out.println("remainder = " + remainder);
+
+
+            remainder *= 100;    // the number of zeroes is the number of digits after dot in the actual result.
+
+            while (remainder > 0) {       // using the same logics as we used to find the whole number.
                 remainder -= denominator;
                 decimalPart++;
             }
 
-            return sign*wholeNumberPart + "." + decimalPart;
-        } else {
-            return "Can not divide by 0";
+
+            decimalPart *= 0.01;  // we need to turn XX number into 0.XX without using "/".
+                                  // XX / 100 = XX * 0.01.
+
+ //           System.out.println("decimalPart = " + decimalPart);
+
         }
+
+        return sign * (wholeNumberPart + decimalPart);  // putting all the parts together  >>> and return it.
+
+
     }
 
 
 
 
     public static void main(String[] args) {
-        System.out.println(divide(20.2, 4.1));
+        System.out.print("Test:   ");
+        System.out.println(divide(20.25, 3.17)); // test positive nominator and denominator >>> expected: positive valid result.
+        System.out.println("Result: " + 20.25/3.17);
+        System.out.println("============================");
+
+        System.out.print("Test:   ");
+        System.out.println(divide(20.25, 0));     // test divide by 0 >>> expected: error message.
+        System.out.println("Result: " + 20.25/0);
+        System.out.println("============================");
+
+        System.out.print("Test:   ");
+        System.out.println(divide(-20.25, 3.17));   // check negative nominator >>> expected: negative valid result.
+        System.out.println("Result: " + -20.25/3.17);
+        System.out.println("============================");
+
+        System.out.print("Test:   ");
+        System.out.println(divide(20.25, -3.17));   // check negative denominator >>> expected: negative valid result.
+        System.out.println("Result: " + 20.25/-3.17);
+        System.out.println("============================");
+
+        System.out.print("Test:   ");
+        System.out.println(divide(-20.25, -3.17));   // check negative nominator and denominator >>> expected: positive valid result.
+        System.out.println("Result: " + -20.25/-3.17);
+        System.out.println("============================");
+
+
+
     }
 
 
