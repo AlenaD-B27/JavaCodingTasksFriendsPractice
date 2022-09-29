@@ -10,19 +10,30 @@ public class DivideMethod {
 
         if (denominator != 0) {
 
-            int count = 0;
+            int sign = 1;
+            if (nominator * denominator < 0){
+                sign = -1;
+            }
+
+            nominator = Math.abs(nominator);
+            denominator = Math.abs(denominator);
+
+            int wholeNumberPart = 0;
             while (nominator > denominator) {
                 nominator -= denominator;
-                count++;
+                wholeNumberPart++;
             }
-// some changes
-            int countRemainder = 0;
-            nominator *= 10;
-            while (nominator > 0) {
-                nominator -= denominator;
-                countRemainder++;
+
+            double remainder = nominator;
+
+            int decimalPart = 0;
+            remainder *= 100;
+            while (remainder > 0) {
+                remainder -= denominator;
+                decimalPart++;
             }
-            return "" + count + "." + countRemainder;
+
+            return sign*wholeNumberPart + "." + decimalPart;
         } else {
             return "Can not divide by 0";
         }
@@ -32,13 +43,8 @@ public class DivideMethod {
 
 
     public static void main(String[] args) {
-        System.out.println(divide(20.2, 3));
+        System.out.println(divide(20.2, 4.1));
     }
-
-
-
-
-
 
 
 
