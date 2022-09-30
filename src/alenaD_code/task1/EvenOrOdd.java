@@ -9,22 +9,22 @@ public class EvenOrOdd {
      */
 
     public static void identify(int number){
-        if(number != 0) {
+
 
             if (number % 2 == 0) {
-                System.out.println("number " + number + " is EVEN");
+                System.out.println(number + " is EVEN");
             } else {
-                System.out.println("number " + number + " is ODD");
+                System.out.println(number + " is ODD");
             }
-        } else {
-
-            System.out.println("Zero can not be odd or even");
-        }
     }
+
+
+    // P.S. All integer numbers are even or odd. If a number is divided by 2 and leaves the remainder as 0, then it is even; otherwise, it is an odd number. No exceptions. Zero is an even number. For negative numbers the rule is the same as for positive numbers.
 
     public static void main(String[] args) {
         identify(-2);
         identify(0);
+        identify(248);
     }
 
 
