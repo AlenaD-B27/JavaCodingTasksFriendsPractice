@@ -24,10 +24,10 @@ public class DivideMethod {
  //           System.out.println("sign = " + sign);
 
             nominator = Math.abs(nominator);        // both nominator and denominator need to be turned into positive numbers.
-            denominator = Math.abs(denominator);    // Math.abs(-x); is the method for |-x| = x.
+            denominator = Math.abs(denominator);    // Math.abs(-x); is the method for |-x| = x. |x| = x. Makes any number positive.
 
-            while (nominator > denominator) {  // here we are checking how many times denominator can fit into nominator
-                nominator -= denominator;      // by subtraction: 10/2 = 10-2-2-2-2-2 = 10-(2*5) --> 5 is the result.
+            while (nominator >= denominator) {  // here we are checking how many times denominator can fit into nominator
+                nominator -= denominator;      // n = n - d ----> n -= d  // by subtraction: 10/2 = 10-2-2-2-2-2 = 10-(2*5) --> 5 is the result.
                 wholeNumberPart++;
             }
 
@@ -63,8 +63,8 @@ public class DivideMethod {
 
     public static void main(String[] args) {
         System.out.print("Test:   ");
-        System.out.println(divide(20.25, 3.17)); // test positive nominator and denominator >>> expected: positive valid result.
-        System.out.println("Result: " + 20.25/3.17);
+        System.out.println(divide(90.0, 5.89)); // test positive nominator and denominator >>> expected: positive valid result.
+        System.out.println("Result: " + 90.0/5.89);
         System.out.println("============================");
 
         System.out.print("Test:   ");
