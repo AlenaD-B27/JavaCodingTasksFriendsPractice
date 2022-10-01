@@ -1,4 +1,4 @@
-package week_one;
+package first_week;
 
 public class FINRA {
     public static void fromOneToThirty(int number) {

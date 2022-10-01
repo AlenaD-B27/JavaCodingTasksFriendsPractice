@@ -1,4 +1,4 @@
-package week_one;
+package first_week;
 
 public class Divide {
     public static int divide(int num1, int num2) {

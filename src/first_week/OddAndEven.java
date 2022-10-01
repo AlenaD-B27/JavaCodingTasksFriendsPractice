@@ -1,4 +1,4 @@
-package week_one;
+package first_week;
 
 public class OddAndEven {
 
@@ -12,7 +12,7 @@ public class OddAndEven {
     }
 
     public static void main(String[] args) {
-     oddOrEven(5);
+     oddOrEven(0);
      oddOrEven(6);
     }
 }
