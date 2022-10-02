@@ -1,13 +1,8 @@
-public class Main {
+package Task123;
+
+public class Finra {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-
-        OddAndEven OddEven = new OddAndEven();
-        System.out.println(OddEven.OddOrEven(55));
-
          FinraMethod();
-
-
 
     }
     public static void FinraMethod() {
@@ -23,6 +18,8 @@ public class Main {
             }
         }
     }}
+
+
 
 
 
