@@ -1,4 +1,4 @@
-package Task123;
+package WeeklyTasks.week_1;
 
 public class OddAndEven {
 
