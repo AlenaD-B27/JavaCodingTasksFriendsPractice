@@ -7,12 +7,22 @@ public class SwapNumbers {
             //Swap two variable' values without using a third variable
             /*char c = 'a';
               char d = 'l';*/
+        String s = "Hello";
+        String s1 = "world";
+        s +=" "+s1;//hello world
 
-            double a = 3.3;// only 3.4 and 3.6
+        s1 = s.substring(0,s.indexOf(" "));
+
+        s = s.substring(s.indexOf(" ")+1);
+        //s = s.trim();
+        System.out.println(s);
+        System.out.println(s1);
+
+            double a = 3.4;// only 3.4 and 3.6
             double b = 3.7;
-            a = a + b;
+            a +=b;
             b = a - b;
-            a = a - b;
+            a -= b;
             System.out.println(a);
             System.out.println(b);
         System.out.println("=====================");
