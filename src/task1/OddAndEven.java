@@ -1,4 +1,4 @@
-package first_week;
+package task1;
 
 public class OddAndEven {
 

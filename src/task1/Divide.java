@@ -1,4 +1,4 @@
-package first_week;
+package task1;
 
 public class Divide {
     public static int divide(int num1, int num2) {
