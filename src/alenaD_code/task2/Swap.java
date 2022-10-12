@@ -7,8 +7,8 @@ Swap two variable' values without using a third variable
      */
     public static void main(String[] args) {
 
-        int x = 10;
-        int y = -5;
+        double x = 3.4;
+        double y = 3.7;
         System.out.println("x = " + x);
         System.out.println("y = " + y);
 
@@ -28,9 +28,9 @@ Swap two variable' values without using a third variable
         System.out.println("x1 = " + x1);
         System.out.println("y1 = " + y1);
 
-        y1 += x1;
-        x1 = y1.replace(x1, "");
-        y1 = y1.replace(x1, "");
+        y1 += x1; // WorldHello
+        x1 = y1.replace(x1, ""); // Hello = WorldHello.replace(Hello, "") =>   World
+        y1 = y1.replace(x1, ""); // WorldHello = WorldHello.replace(World, "") => Hello
         System.out.println("x1 = " + x1);
         System.out.println("y1 = " + y1);
 
@@ -42,8 +42,7 @@ Swap two variable' values without using a third variable
         System.out.println("y2 = " + y2);
 
         y2 += x2; // y2 = Ã = 195
-        x2 = (char) (y2 - x2);
-
+        x2 = (char) (y2 - x2);  // x = y - x;
         y2 -= x2;
         System.out.println("x2 = " + x2);
         System.out.println("y2 = " + y2);
