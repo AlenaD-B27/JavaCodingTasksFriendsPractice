@@ -15,7 +15,7 @@ public class ArmstrongNumber {
         int sumOfPoweredDigits = 0;
 
         if(num < 0){
-
+            // nothing happens
         }else {
 
             for (int i = num; i != 0; i /= 10) {
@@ -24,14 +24,11 @@ public class ArmstrongNumber {
 
             int[] digitsInPower = new int[totalDigits];
 
-            double dummyDouble = num;
-            int dummyInt = num;
+            int remainder = num;
 
             for (int i = 0; i < totalDigits; i++) {
-                dummyDouble /= 10;
-                dummyInt /= 10;
-                digitsInPower[i] = (int) Math.pow((dummyDouble - dummyInt) * 10, totalDigits);
-                dummyDouble -= (dummyDouble - dummyInt);
+                digitsInPower[i] = (int) Math.pow(remainder % 10, totalDigits);
+                remainder/=10;
             }
 
 
