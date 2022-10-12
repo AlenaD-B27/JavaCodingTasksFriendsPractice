@@ -11,29 +11,33 @@ public class ArmstrongNumber {
 
     public static void checkIfArmstrong(int num){
 
-
-
         int totalDigits = 0;
-        for(int i = num; i != 0 ; i /= 10){
-            totalDigits++;
-        }
-
-        int [] digitsInPower = new int [totalDigits];
-
-        double dummyDouble = num;
-        int dummyInt = num;
-
-        for(int i = 0; i < totalDigits; i++){
-            dummyDouble /= 10 ;
-            dummyInt /= 10;
-            digitsInPower[i] = (int) Math.pow((dummyDouble-dummyInt)*10, totalDigits);
-            dummyDouble -= (dummyDouble-dummyInt);
-        }
-
         int sumOfPoweredDigits = 0;
 
-        for(int i = 0; i < digitsInPower.length; i++){
-            sumOfPoweredDigits += digitsInPower[i];
+        if(num < 0){
+
+        }else {
+
+            for (int i = num; i != 0; i /= 10) {
+                totalDigits++;
+            }
+
+            int[] digitsInPower = new int[totalDigits];
+
+            double dummyDouble = num;
+            int dummyInt = num;
+
+            for (int i = 0; i < totalDigits; i++) {
+                dummyDouble /= 10;
+                dummyInt /= 10;
+                digitsInPower[i] = (int) Math.pow((dummyDouble - dummyInt) * 10, totalDigits);
+                dummyDouble -= (dummyDouble - dummyInt);
+            }
+
+
+            for (int i = 0; i < digitsInPower.length; i++) {
+                sumOfPoweredDigits += digitsInPower[i];
+            }
         }
 
 
@@ -44,7 +48,8 @@ public class ArmstrongNumber {
 
 
     public static void main(String[] args) {
-
+        checkIfArmstrong(-153);
+        checkIfArmstrong(0);
         checkIfArmstrong(153);
     }
 
