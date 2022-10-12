@@ -26,7 +26,7 @@ Codility
      */
 
 public class ConsecutiveNumber {
-    // author: Alena Darazhei
+    // author: AlenaD
     public static void consecutive(int N){
 
         for (int i = 1; i <= N; i++){
