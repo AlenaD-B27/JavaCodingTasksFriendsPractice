@@ -31,7 +31,17 @@ public class SwapValues {
 
         // author Maria
         // for String values
-        // ---- coming soon! ------
+        String s = "Hello";
+        String s1 = "world";
+
+        s += " " + s1; // Hello world
+
+        s1 = s.substring(0,s.indexOf(" "));
+
+        s = s.substring(s.indexOf(" ")+1);
+
+        System.out.println(s);
+        System.out.println(s1);
 
         //==========================================================
 
