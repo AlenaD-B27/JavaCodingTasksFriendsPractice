@@ -11,7 +11,7 @@ public class ArmstrongNumber {
 
     public static void checkIfArmstrong(int num){
 
-        int totalDigits = 0;
+        int totalDigits = 0; //1634
         int sumOfPoweredDigits = 0;
 
         if(num < 0){
@@ -47,7 +47,8 @@ public class ArmstrongNumber {
     public static void main(String[] args) {
         checkIfArmstrong(-153);
         checkIfArmstrong(0);
-        checkIfArmstrong(153);
+        checkIfArmstrong(54748);
+        checkIfArmstrong(12345);
     }
 
 
