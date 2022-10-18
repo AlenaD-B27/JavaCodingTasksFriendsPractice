@@ -18,17 +18,13 @@ public class ReverseNegativeNumber {
             reverse = reverse * 10 + digit; // ex we have 6789 --> 0*10+9--> 9*10+8--> 98*10+7--> 987*10 +6 --> 9876//s then added to the variable reversed after multiplying it by 10. Multiplication by 10 adds a new place in the reversed number. One place multiplied by 10 gives me tenth place, tenth gives  hundredth...
             number = number / 10;// we divided by 10 to remove last digit : we have num 2345--> last digit is 5432
         }
-        if(isNegative){
-            reverse *= (-1);//make the number negative
-        }else {
-            return reverse;
+            return reverse * -1;
         }
-        return reverse;
-    }
+
 
     public static void main(String[] args) {
         System.out.println("reverseNegativeNumber(89) = " + reverseNegativeNumber(89));
-        System.out.println("reverseNegativeNumber(-45) = " + reverseNegativeNumber(-45));
+        System.out.println("reverseNegativeNumber(-45) = " + reverseNegativeNumber(-123456789));
         System.out.println("reverseNegativeNumber(-76) = " + reverseNegativeNumber(-76));
         System.out.println("reverseNegativeNumber(-84) = " + reverseNegativeNumber(-84));
     }
