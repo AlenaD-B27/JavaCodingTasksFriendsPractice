@@ -17,6 +17,7 @@ Ex: FrequencyOfChars("AAABBCDD") ==> A3B2C1D2
         String returnStr = "";
 
 
+        int helper = 0;
 
         for (int i = 0; i < str.length(); i++) {             // character we compare
             int count = 0;
@@ -27,22 +28,30 @@ Ex: FrequencyOfChars("AAABBCDD") ==> A3B2C1D2
                 }
 
 
+
+
             }
 
-            if(!returnStr.contains("" + str.charAt(i))){  // to avoid duplicate data
+
+
+            if(!returnStr.contains(helper + "" + str.charAt(i))){  // to avoid duplicate data  //21
                 returnStr += "" + count + str.charAt(i);
             }
+
+            helper = count;
 
         }
         return returnStr;
     }
 
     public static void main(String[] args) {
-        System.out.println(frequencyOfChars("mississippi"));
-        System.out.println(frequencyOfChars(null));
-        System.out.println(frequencyOfChars("infinity"));
-        System.out.println(frequencyOfChars("banana"));
-        System.out.println(frequencyOfChars("AAABBCDD"));
+//        System.out.println(frequencyOfChars("mississippi"));
+//        System.out.println(frequencyOfChars(null));
+//        System.out.println(frequencyOfChars("infinity"));
+//        System.out.println(frequencyOfChars("banana"));
+//        System.out.println(frequencyOfChars("AAABBCDD"));
+        System.out.println(frequencyOfChars("11222****%%%js@@009766"));
+     //   System.out.println(frequencyOfChars("222"));
     }
 
 
