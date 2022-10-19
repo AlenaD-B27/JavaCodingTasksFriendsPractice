@@ -1,4 +1,4 @@
-package task2;
+package week2;
 
 public class Swap {
 }
