@@ -15,7 +15,7 @@ public class SwapNumbers {
 
         //Extract str1 from updated str1
         str1 = str1.substring(str2.length());
-        System.out.println("strings after swapping: " + str1 + " " + str2);
+        System.out.println("Strings after swapping: " + str1 + "  " + str2);
 
     }
 }
