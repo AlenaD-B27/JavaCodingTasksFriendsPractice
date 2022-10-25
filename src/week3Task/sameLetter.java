@@ -25,5 +25,6 @@ public class sameLetter {
     public static void main(String[] args) {
         System.out.println(sameLetters("aaasdf","sdfaaa"));
         System.out.println(sameLetters("abc", "abb"));
+        System.out.println(sameLetters("JHGDF33432","33432JHGDF"));
     }
 }
