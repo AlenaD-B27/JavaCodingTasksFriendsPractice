@@ -26,7 +26,7 @@ same("abc", "abb"); -> false:
     }
 
     public static void main(String[] args) {
-        System.out.println(sameLetters("abc","aab"));
+        System.out.println(sameLetters("abc1*","*cab1"));
     }
 }
 
