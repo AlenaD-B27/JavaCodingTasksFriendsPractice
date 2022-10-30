@@ -19,11 +19,14 @@ public class SumOfDigitsInString {
             }
         }
 
-        // TODO : convert digitsOnly to STRING Array and add the digits through looping Array
+        String [] digitsAsStrings = new String[digitsOnly.length()];
 
+        for (int i = 0; i < digitsAsStrings.length; i++) {
+            digitsAsStrings[i] = "" + digitsOnly.charAt(i);
+        }
 
         for (int i = 0; i < digitsOnly.length(); i++) {
-            sum = Integer.parseInt(digitsOnly);
+            sum += Integer.parseInt(digitsAsStrings[i]);
         }
 
 
@@ -33,7 +36,7 @@ public class SumOfDigitsInString {
 
 
     public static void main(String[] args) {
-        sumOfDigitsInString("Alena123D456");
+        System.out.println(sumOfDigitsInString("Alena123D456"));
 
     }
 
