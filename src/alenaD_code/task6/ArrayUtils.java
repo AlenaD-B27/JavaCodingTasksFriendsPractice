@@ -66,16 +66,55 @@ public class ArrayUtils {
     }
 
 
+    //Array -- Sort Descending
+    //Write a return method that can sort an int array in descending order without using the sort method of the Arrays class
+
+    public static int [] sortDsc(int [] arr) {
+
+        int[] returnArr = new int[arr.length];
+
+
+        for (int j = 0; j < returnArr.length; j++) {
+
+
+            int max = maxNum(arr);
+
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == max) {
+                    arr[i] = Integer.MIN_VALUE;
+                    break;
+                }
+            }
+
+            returnArr[j] = max;
+
+
+        }
+
+        return returnArr;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public static void main(String[] args) {
 
         int [] dummy = {1, 25, -100, 4};
 
-        System.out.println(maxNum(dummy));
-        System.out.println(minNum(dummy));
-        System.out.println(Arrays.toString(sortAsc(dummy)));
-
+//        System.out.println(maxNum(dummy));
+//        System.out.println(minNum(dummy));
+//        System.out.println(Arrays.toString(sortAsc(dummy)));
+//        System.out.println(Arrays.toString(sortDsc(dummy)));
 
 
     }
